@@ -8,9 +8,9 @@
 AsyncWebServer apache(80);
 String processor(const String& var);
 
-const char* ssid = "Electronic_Stuff";
-const char* pswd = "Z75cA6895BcTu1";
-const char* Account_id ="anatolius";
+const char* ssid = "wifi";
+const char* pswd = "1234";
+const char* Account_id ="admin";
 const char* Account_pswd = pswd;
 
 void setup(void){
