@@ -4,14 +4,10 @@
 #include <SPIFFS.h>
 #include <WiFi.h>
 #include <WiFiClient.h>
+#include "Settings.h"
 
 AsyncWebServer apache(80);
 String processor(const String& var);
-
-const char* ssid = "wifi";
-const char* pswd = "1234";
-const char* Account_id ="admin";
-const char* Account_pswd = pswd;
 
 void setup(void){
   Serial.begin(115200);
@@ -38,6 +34,21 @@ void setup(void){
   });
   apache.on("/css/styles.css",HTTP_GET,[](AsyncWebServerRequest *request){
     request->send(SPIFFS,"/css/styles.css","text/css");
+  });
+  apache.on("/login",HTTP_GET,[](AsyncWebServerRequest *request){
+    String inputMessage0,inputMessage1,inputParam0,inputParam1;
+    if((request->hasParam(param_AccountID)) && (request->hasParam(param_PasswordID))){
+      inputMessage0 = request->getParam(param_AccountID)->value();
+      inputMessage1 = request->getParam(param_PasswordID)->value();
+      inputParam0 = param_AccountID;
+      inputParam1 = param_PasswordID;
+    }
+   if((inputMessage0 == default_username) && (inputMessage1 == default_password)){
+      request->send(SPIFFS,"/attack_wifi.html");
+    }
+    else{
+      request->send(SPIFFS,"/403.html");
+    }
   });
   apache.begin();
 }

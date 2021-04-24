@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.8, minimal-ui">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="shortcut icon" href="img/icon.png">
-        <script scr="script/script.js" type="text/javascript"></script>
+        <script src="script/script.js"></script>
         <title>ESP32 HackTool</title>
     </head>
     <body>
@@ -18,13 +18,13 @@
             </div>
             <div id="login_panel">
                 <h1>Welcome to Attack Area Please Login </h1>
-                <form action="">
-                    <label for="Account_ID">Account:</label>
-                    <input type="text" id="Account_ID" name="Account_ID"><br><br>
-                    <label for="Account_Pswd">Password:</label>
-                    <input type="password" id="Account_Pswd" name="Account_Pswd"><br><br>
-                    <button onclick="req_login()">Login</button>
-                </form>
+                <form action="/login">
+                    <label>Account:</label>
+                    <input type="text" name="AccountID:">
+                    <label>Password:</label>
+                    <input type="text" name="PasswordID:">
+                    <input type="submit" value="Submit">
+                  </form>
             </div>
         </div>
     </body>
