@@ -1,0 +1,73 @@
+html{
+    box-sizing: inherit;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+#about_us_selection{
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+#navigator ul{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+#navigator li{
+   float: left;
+}
+#navigator li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navigator li a:hover{
+    background-color: #111;
+}
+#login_panel{
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+#footer_container{
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+}
+#footer_container p{
+    color: white;
+    text-align: center;
+}
+#wifi_scan{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 25%;
+}
+#wifi_scan tr,#wifi_scan th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#wifi_scan tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+#wifi_scan tr:hover{
+    background-color: #ddd;
+}
+#wifi_scan th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
