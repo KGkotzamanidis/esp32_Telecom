@@ -1,13 +1,4 @@
-#include <Arduino.h>
-#include <ESPAsyncWebServer.h>
-#include <ESPmDNS.h>
-#include <SPIFFS.h>
-#include <WiFi.h>
-#include <WiFiClient.h>
 #include "Settings.h"
-
-AsyncWebServer apache(80);
-String processor(const String& var);
 
 void setup(void){
   Serial.begin(115200);
@@ -54,5 +45,4 @@ void setup(void){
 }
 
 void loop(void){
-
 }
